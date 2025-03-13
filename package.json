@@ -1,0 +1,27 @@
+{
+  "name": "mini-di",
+  "version": "0.0.1",
+  "description": "A lightweight and efficient DI container, designed for simplicity, speed, and testability—making dependency management seamless and intuitive.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "build:watch": "tsup src/index.ts --watch --minify",
+    "start:watch": "tsx watch dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "mini-di": "file:mini-di-0.0.1.tgz"
+  }
+}
