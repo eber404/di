@@ -1,6 +1,6 @@
 {
   "name": "@codespeaks/di",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight and efficient DI container, designed for simplicity, speed, and testability—making dependency management seamless and intuitive.",
   "main": "dist/index.js",
   "scripts": {
@@ -11,8 +11,17 @@
     "build:watch": "tsup src/index.ts --watch --minify",
     "start:watch": "tsx watch dist/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "lightweight-di",
+    "di-container",
+    "dependency injection",
+    "dependency-injection",
+    "di",
+    "ioc",
+    "inversion-of-control",
+    "typescript"
+  ],
+  "author": "@eber404",
   "license": "ISC",
   "packageManager": "pnpm@10.5.2",
   "devDependencies": {
@@ -21,7 +30,7 @@
     "typescript": "^5.8.2"
   },
   "types": "dist/index.d.ts",
-  "dependencies": {
-    "mini-di": "file:mini-di-0.0.1.tgz"
-  }
+  "files": [
+    "dist"
+  ]
 }
