@@ -1,5 +1,5 @@
 {
-  "name": "mini-di",
+  "name": "@codespeaks/di",
   "version": "0.0.1",
   "description": "A lightweight and efficient DI container, designed for simplicity, speed, and testability—making dependency management seamless and intuitive.",
   "main": "dist/index.js",
