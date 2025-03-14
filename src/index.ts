@@ -12,25 +12,16 @@ interface Registration<T> {
 export class DI {
   private container: Map<ClassRef, Registration<unknown>> = new Map()
 
-  public add<T>(classRef: ClassRef<T>) {
+  public add<T>(classRef: ClassRef<T>, factory?: () => T) {
     const registration: Registration<T> = {
-      lifecycle: 'singleton',
+      lifecycle: factory ? 'transient' : 'singleton',
       classRef,
+      ...(factory ? { factory } : {}) 
     }
 
     this.container.set(classRef, registration)
 
     return this.injectWrapper(registration)
-  }
-
-  public transient<T>(classRef: ClassRef<T>, factory: () => T) {
-    const registration: Registration<T> = {
-      factory,
-      lifecycle: 'transient',
-      classRef,
-    }
-
-    this.container.set(classRef, registration)
   }
 
   public get<T>(classRef: ClassRef<T>): T {
