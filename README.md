@@ -90,6 +90,10 @@ Retrieves an instance of the registered class.
 
 - `classRef`: The reference of the class to be retrieved.
 
+### `getSelf(): T`
+
+Retrieves an instance of the added class.
+
 ## License 📄
 
 This project is licensed under the MIT License.
