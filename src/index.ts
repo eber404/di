@@ -16,7 +16,7 @@ export class DI {
     const registration: Registration<T> = {
       lifecycle: factory ? 'transient' : 'singleton',
       classRef,
-      ...(factory ? { factory } : {}) 
+      ...(factory ? { factory } : {}),
     }
 
     this.container.set(classRef, registration)
@@ -56,12 +56,11 @@ export class DI {
 
     this.container.set(registration.classRef, registration)
 
-    return {
-      getSelf: () => this.get(registration.classRef),
-    }
+    return registration.instance
   }
 
   private injectWrapper = <T>(registration: Registration<T>) => ({
     inject: (...depRefs: ClassRef[]) => this.inject(registration, ...depRefs),
+    getSelf: () => this.get(registration.classRef),
   })
 }
