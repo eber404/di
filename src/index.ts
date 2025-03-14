@@ -9,7 +9,7 @@ interface Registration<T> {
   factory?: () => T
 }
 
-export class DI {
+export class TinyDI {
   private container: Map<ClassRef, Registration<unknown>> = new Map()
 
   public add<T>(classRef: ClassRef<T>, factory?: () => T) {

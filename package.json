@@ -1,7 +1,7 @@
 {
-  "name": "@codespeaks/di",
-  "version": "0.0.2",
-  "description": "A lightweight and efficient DI container, designed for simplicity, speed, and testability—making dependency management seamless and intuitive.",
+  "name": "@codespeaks/tinydi",
+  "version": "0.0.3",
+  "description": "A simple and intuitive DI container, designed for simplicity, making dependency management seamless and easy to use.",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

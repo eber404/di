@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      mini-di:
-        specifier: file:mini-di-0.0.1.tgz
-        version: file:mini-di-0.0.1.tgz
     devDependencies:
       tsup:
         specifier: ^8.4.0
@@ -433,10 +429,6 @@ packages:
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
-
-  mini-di@file:mini-di-0.0.1.tgz:
-    resolution: {integrity: sha512-dZliy8gBP5yZdHdt5k7wFLC4zRcQHlgWyNvVJ7ZBBed07B6gJGwf/bQkymBSS2acCaQ2/8E0JqSVK5R/TscasA==, tarball: file:mini-di-0.0.1.tgz}
-    version: 0.0.1
 
   minimatch@9.0.5:
     resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
@@ -919,8 +911,6 @@ snapshots:
   lodash.sortby@4.7.0: {}
 
   lru-cache@10.4.3: {}
-
-  mini-di@file:mini-di-0.0.1.tgz: {}
 
   minimatch@9.0.5:
     dependencies:
