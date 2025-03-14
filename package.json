@@ -1,8 +1,25 @@
 {
   "name": "@codespeaks/tinydi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple and intuitive DI container, designed for simplicity, making dependency management seamless and easy to use.",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eber404/tinydi"
+  },
+  "author": "@eber404",
+  "license": "ISC",
+  "keywords": [
+    "tiny-di",
+    "simple-di",
+    "lightweight-di",
+    "di-container",
+    "dependency-injection",
+    "di",
+    "ioc",
+    "inversion-of-control",
+    "typescript"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/index.ts",
@@ -13,18 +30,6 @@
     "build:watch": "tsup src/index.ts --watch --minify",
     "start:watch": "tsx watch dist/index.js"
   },
-  "keywords": [
-    "lightweight-di",
-    "di-container",
-    "dependency injection",
-    "dependency-injection",
-    "di",
-    "ioc",
-    "inversion-of-control",
-    "typescript"
-  ],
-  "author": "@eber404",
-  "license": "ISC",
   "packageManager": "pnpm@10.5.2",
   "devDependencies": {
     "tsup": "^8.4.0",
