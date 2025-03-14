@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
+    "clear": "rm -rf dist",
+    "clear:all": "rm -rf dist node_modules",
+    "build": "pnpm clear && tsc",
     "start": "node dist/index.js",
     "build:watch": "tsup src/index.ts --watch --minify",
     "start:watch": "tsx watch dist/index.js"
