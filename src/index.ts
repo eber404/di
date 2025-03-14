@@ -51,7 +51,7 @@ export class DI {
       return instance as T
     }
 
-    return this.container.get(classRef)?.factory?.() as T
+    return registration?.factory?.() as T
   }
 
   public inject<T>(registration: Registration<T>, ...depRefs: ClassRef[]) {
@@ -66,7 +66,7 @@ export class DI {
     this.container.set(registration.classRef, registration)
 
     return {
-      get: () => this.get(registration.classRef),
+      getSelf: () => this.get(registration.classRef),
     }
   }
 
