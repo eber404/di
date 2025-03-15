@@ -45,6 +45,8 @@ class User {
 const container = new TinyDI()
 
 container.add(ProfileService)
+container.add(RoleService)
+
 const user = container.add(User).inject(ProfileService, RoleService).getSelf()
 ```
 
