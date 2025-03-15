@@ -4,8 +4,6 @@ This library provides a simple implementation of dependency injection in TypeScr
 
 ## Installation 📦
 
-To install the library:
-
 ```sh
 npm i @codespeaks/tinydi
 ```
@@ -14,10 +12,10 @@ npm i @codespeaks/tinydi
 
 ### Import
 
-First, import the `TinyDI` class:
+First, import the `createContainer` function:
 
 ```typescript
-import { TinyDI } from '@codespeaks/tinydi'
+import { createContainer } from '@codespeaks/tinydi'
 ```
 
 ### Adding Classes to the Container
@@ -42,7 +40,7 @@ class User {
   }
 }
 
-const container = new TinyDI()
+const container = createContainer()
 
 container.add(ProfileService)
 container.add(RoleService)
@@ -52,7 +50,7 @@ const user = container.add(User).inject(ProfileService, RoleService).getSelf()
 
 ### Lifecycle
 
-You can specify the lifecycle of instances when registering them. By default, instances are singletons. To create transient instances, provide a factory as the second parameter of the `.add` method.
+You can specify the lifecycle of instances when registering them. By default, instances are singletons. To create transient instances, provide a factory as the second parameter of the `add` method.
 
 ```typescript
 class MyService {

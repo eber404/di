@@ -1,6 +1,6 @@
 {
   "name": "@codespeaks/tinydi",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A simple and intuitive DI container, designed for simplicity, making dependency management seamless and easy to use.",
   "main": "dist/index.js",
   "repository": {

@@ -1,5 +1,4 @@
 type ClassRef<T = unknown> = new (...args: any[]) => T
-
 type Lifecycle = 'singleton' | 'transient'
 
 interface Registration<T> {
@@ -9,7 +8,7 @@ interface Registration<T> {
   factory?: () => T
 }
 
-export class TinyDI {
+class TinyDI {
   private container: Map<ClassRef, Registration<unknown>> = new Map()
 
   public add<T>(classRef: ClassRef<T>, factory?: () => T) {
@@ -64,3 +63,5 @@ export class TinyDI {
     getSelf: () => this.get(registration.classRef),
   })
 }
+
+export const createContainer = () => new TinyDI()
